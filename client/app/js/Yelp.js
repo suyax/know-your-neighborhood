@@ -6,7 +6,7 @@ var yelpRequestTimeout = setTimeout(function(){
 var $keyword = $('#keyword').val();
 var $selectCategory =$('#selectCategory').val();
 var locations = [];
-$keyword = 'resturant';
+$keyword = 'restaurant';
 $selectCategory = 'food';
 
 

@@ -5,7 +5,7 @@
 			center: center,
 			zoom: 14
 		});
-		/*var defaultImg = 'images/Hotel.svg';
+		var defaultImg = 'images/Hotel.svg';
 		var marker = new google.maps.Marker({
 			position: center,
 			map: map,
@@ -21,7 +21,7 @@
 			},8000);
 		});
 
-		/*marker.addListener('click', toggleBounce);
+		marker.addListener('click', toggleBounce);
 
 		function toggleBounce() {
 			if (marker.getAnimation() !== null) {

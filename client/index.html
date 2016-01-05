@@ -14,16 +14,21 @@
         <div class="navbar-header">
             <a class="navbar-brand">Know Your Neighborhood Like Local Do</a>
         </div>
-        <div id="navbar" class="navbar-collapse">
-            <form class="navbar-form">
+        <div  id="navbar" class="navbar-collapse">
+            <div ng-controller="yelpCaController">
+            <form name="yelpCaForm">
+                <select name="carlist" ng-model ="data.carlist">
+                  <option value="">---Please select---</option>
+                  <option value="{{data.Food}}">Hotels</option>
+                  <option value="Food">Food</option>
+                  <option value="Shopping">Shopping</option>
+                  <option value="Buses">Buses</option>
+                </select>
+            </form>
+            </div>
                 <div class="form-group" style="display:inline;">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                        </div>
-                        <input id="keyword" data-bind="value: keyword" class="form-control"/>
-                        <span  id="search" ng-click="submit()"class="input-group-addon" ><span class="glyphicon glyphicon-search"></span>
-                        </span>
-                    </div>
+                        <input type ="text" ng-model="yelp" id="keyword" placeholder="What you want?" class="form-control"/>
+                        <input  type="submit"id="search" id="submit" value="Submit"/>
                 </div>
                 <a href="#signout" ng-click="signout()" class="logout">Sign Out</a>
             </form>
@@ -40,7 +45,6 @@
             <div class="col-xs-8"></div>
         </div>
     </div>
-    <div ng-view></div>
     <!-- end template -->
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>

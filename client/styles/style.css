@@ -19,10 +19,19 @@ body {
 }
 
 a {
-    color: #fefefe;
+    color: #168ccc;
     margin-left: 10px;
-
 }
+
+label {
+    color: #168ccc;
+    margin-left: 10px;
+}
+
+input {
+    margin-right: 10px;
+}
+
 
 .navbar-custom .icon-bar {
     background-color:#fff;
