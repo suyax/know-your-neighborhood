@@ -1,0 +1,17 @@
+{
+  "name": "know-your-neighborhood-like-local",
+  "version": "1.0.0",
+  "authors": "suya xu",
+  "license": "Non",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16",
+    "angular-mocks": "~1.3.16"
+  }
+}

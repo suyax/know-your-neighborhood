@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app ="Myapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Know your Neighborhood like local</title>
+    <!-- CSS -->
+    <link rel="icon" href="styles/bootstrap-3.3.5/docs/favicon.ico">
+    <link href="styles/bootstrap-3.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- begin template -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand">Know Your Neighborhood Like Local Do</a>
+        </div>
+        <div id="navbar" class="navbar-collapse">
+            <form class="navbar-form">
+                <div class="form-group" style="display:inline;">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                        </div>
+                        <input id="keyword" data-bind="value: keyword" class="form-control"/>
+                        <span  id="search" ng-click="submit()"class="input-group-addon" ><span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+                </div>
+                <a href="#signout" ng-click="signout()" class="logout">Sign Out</a>
+            </form>
+        </div>
+    </nav>
+
+    <div id="map"></div>
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <div class="col-xs-4" id="left">
+                <h3 id="list-header">Yelp Links</h3>
+                <ul id="yelpElem"></ul>
+            </div>
+            <div class="col-xs-8"></div>
+        </div>
+    </div>
+    <div ng-view></div>
+    <!-- end template -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv29-6fRPf118Uy6ETE2IMIJPfvEW34RM&amp;callback=initMap"></script>
+    <script src="app/auth/auth.js"></script>
+    <script src="app/services/services.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>
