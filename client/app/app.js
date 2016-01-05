@@ -4,6 +4,7 @@ angular.module('Myapp', [
   'ngRoute'
 ])
 
+
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/', {
@@ -20,3 +21,4 @@ angular.module('Myapp', [
 
   // $localtionProvider.html5Mode(true);
 });
+

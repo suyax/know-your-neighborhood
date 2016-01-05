@@ -57,6 +57,11 @@ input {
     box-shadow: inset 0 0 0;
 }
 
+.dropdown {
+    right: 20px
+    position: relative;
+}
+
 #main, #main>.row {
     height:100%;
 }
@@ -85,7 +90,7 @@ input {
     border-bottom-left-radius: 0;
 }
 
-.dropdown {
-    right: 20px
-    position: relative;
+div #slected-ca {
+    color: white
 }
+
