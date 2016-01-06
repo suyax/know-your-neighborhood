@@ -42,7 +42,6 @@ angular.module('Myapp', [])
      $scope.yelpselectCa = $scope.item.name;
      console.log($scope.yelpselectCa);
      sharedProperties.setselectCa($scope.yelpselectCa);
-     console.log(sharedProperties.getselectCa());get to know the neighborhood
   };
 
 
@@ -96,6 +95,9 @@ angular.module('Myapp', [])
         data: parameters,
         cache: true,
         dataType: "jsonp",
+        error: function( error ){
+          throw erro;
+        },
 
         //jsonp: "callback",
         success: function( response ) {

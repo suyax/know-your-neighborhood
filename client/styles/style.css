@@ -8,8 +8,13 @@ license: MIT
 author: bootply.com
 */
 
+li input {
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+}
 
-html,body{
+html,body {
     height:100%;
 }
 
@@ -31,6 +36,10 @@ label {
 
 input {
     margin-right: 10px;
+}
+
+ul {
+    margin-top: 20px;
 }
 
 

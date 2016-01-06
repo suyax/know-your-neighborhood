@@ -11,7 +11,7 @@ var defaultData = {
 //Model
 //Global variables---model
 var items = [];
-var markers = [];
+//var markers = [];
 //Model-initial Model
 //Model-initial Model yelp
 var $keyword = $('#keyword');
@@ -123,12 +123,18 @@ function deleteMarkers() {
 */
 //view
 //initial map view
-function initMap() {
+/*function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
     center: defaultData.center,
     zoom: 12
   });
-  initMarkers(map);//call iniMarkers to make markers on map
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  //call iniMarkers to make markers on map
   map.addListener('center_changed', function(){
     // 5 seconds after the center of the map has changed go back to initial center
     window.setTimeout(function(){
@@ -136,7 +142,7 @@ function initMap() {
       map.setZoom(12);
     },8000);
   });//if make center changed go back to original center
-};
+};*/
 /*//addMarker to map view
 function initMarkers(map) {
   items.forEach(function(item){
@@ -149,7 +155,7 @@ function initList(items){
   $yelpElem.empty();
   console.log(items);
   items.forEach(function(item){
-    var yelplist = '<a href="' + item.url + '">' + item.name + '    </a><img src="' + item.rate + '"</img><span>    ' + item.review + '</span><br><img src="' + item.img + '"</img>' ;
+    var yelplist = '<a href="' + item.url + '">' + item.name + '    </a><img src="' + item.rate + '"</img><span>    ' + item.review + '</span><br><img src="' + item.img + '"</img>'+'<input placeholder='+'"'+'Memo'+'"'+'>'+'<button>Remember</button>' ;
     $("<li/>",{
       html: yelplist
     }).prependTo($yelpElem);
@@ -165,6 +171,17 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
     center: defaultData.center,
     zoom: 12
+  });
+     var infowindow = new google.maps.InfoWindow({
+    content: 'my stay!'
+  });
+    var marker = new google.maps.Marker({
+    position: defaultData.center,
+    map: map,
+    title: 'my stay!'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
   map.addListener('center_changed', function(){
     // 8 seconds after the center of the map has changed go back to initial center
