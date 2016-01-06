@@ -8,7 +8,7 @@
     <link href="styles/bootstrap-3.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css" rel="stylesheet">
   </head>
-  <body ng-app="Myapp.staticSelect">
+  <body ng-app="Myapp">
     <!-- begin template -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
@@ -16,22 +16,23 @@
         </div>
         <div id="navbar" class="navbar-collapse">
             <div ng-controller="yelpCaController">
-                <select name="singleSelect" id="singleSelect" ng-model ="data.singleSelect">
+                <select name="singleSelect" id="singleSelect" ng-model ="newSelect" ng-change="yelpselectCa(newSelect)">
                   <option value="">---Please select---</option>
                   <option value="{{data.Hotels}}">Hotels</option>
                   <option value="{{data.Food}}">Food</option>
                   <option value="{{data.Shopping}}">Shopping</option>
                   <option value="{{data.Buses}}">Buses</option>
                 </select>
-                <span id="select-ca" style="color:white">Selected : {{data.singleSelect}} </span>
+                <span id="select-ca" style="color:white">{{newSelect}}</span>
             </div>
             <form>
-                <div class="form-group" style="display:inline;">
-                        <input type ="text" ng-model="yelp" id="keyword" placeholder="What you want?" class="form-control"/>
-                        <input  type="submit"id="search" id="submit" value="Submit"/>
+                <div ng-controller="yelpKeywordController" class="form-group" style="display:inline;">
+                    <input type ="text" ng-model="newValue" id="keyword" placeholder="What you want?" class="form-control"/>
+                    <button ng-click="setKeyword(newValue)">Search</button>
+                    <span style="color:white">{{yelpKeyword.data}}</span>
                 </div>
-                <a href="#signout" ng-click="signout()" class="logout">Sign Out</a>
             </form>
+                <a href="#signout" ng-click="signout()" class="logout">Sign Out</a>
         </div>
     </nav>
 

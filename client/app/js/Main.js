@@ -46,7 +46,6 @@ function dataValidater(data,item){
 
 var encodedSignature = oauthSignature.generate('GET', defaultData.yelp_url, parameters,
     "YOoYY4UHe1D3tEixMbExUtBqptI", "0H8fIAhkGp_z9M09IIfQxmvZoIk");
-console.log(parameters);
 
 parameters.oauth_signature = encodedSignature;
 
@@ -88,7 +87,7 @@ $.ajax({
     }
 });
 //controller-initial
-function addMarker(item,map) {
+/*function addMarker(item,map) {
   var marker = new google.maps.Marker({
       position: item.ll,
       map: map,
@@ -121,7 +120,7 @@ function deleteMarkers() {
   markers = [];
 }
 //controller- update
-
+*/
 //view
 //initial map view
 function initMap() {
@@ -138,34 +137,28 @@ function initMap() {
     },8000);
   });//if make center changed go back to original center
 };
-//addMarker to map view
+/*//addMarker to map view
 function initMarkers(map) {
   items.forEach(function(item){
     addMarker(item, map)
   })
 };
-
+*/
 //initial list view
 function initList(items){
-  $yelpElem.innerHTML="";
+  $yelpElem.empty();
+  console.log(items);
   items.forEach(function(item){
     var yelplist = '<a href="' + item.url + '">' + item.name + '    </a><img src="' + item.rate + '"</img><span>    ' + item.review + '</span><br><img src="' + item.img + '"</img>' ;
     $("<li/>",{
       html: yelplist
-    }).appendTo($yelpElem);
+    }).prependTo($yelpElem);
 
   })
 
 };
 //initial navi view
-var ViewModel = function(keyword){
-  this.keyword = ko.observable(keyword);
 
-  //optionValues : ["Hotels", "Food", "Shopping","Buses"],
-  //selectedOptionValue : ko.observable("Hotels"),
-};
-
-ko.applyBindings(new ViewModel(defaultData["term"]));
 
 //initial map view
 function initMap() {

@@ -4,7 +4,7 @@ var yelpRequestTimeout = setTimeout(function(){
     $yelpElem.text("failed to get yelp resources");
 }, 8000);
 var $keyword = $('#keyword').val();
-var $selectCategory =$('#selectCategory').val();
+var $selectCategory =$('#select').val();
 var locations = [];
 $keyword = 'restaurant';
 $selectCategory = 'food';
