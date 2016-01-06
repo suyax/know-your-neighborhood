@@ -25,18 +25,26 @@ angular.module('Myapp', [])
 })
 
 .controller('yelpCaController', function ($scope, sharedProperties) {
-  $scope.data = {
-      Hotels: "hotels",
-      Food: "food",
-      Shopping: "shopping",
-      Buses: "buses"
-    };
+  $scope.sizes = [
+     {code: 1, name: 'hotels'},
+     {code: 2, name: 'food'},
+     {code: 3, name: 'shopping'},
+     {code: 4, name: 'buses'}
+    ];
+    $scope.yelpselectCa = sharedProperties.getselectCa.data;
   /*  $scope.yelpselectCa ={data: "eeee"};*/
-  $scope.setselectCa = function(newSelect) {
+/*  $scope.setselectCa = function(newSelect) {
     console.log(newSelect);
     $scope.yelpselectCa.data = newSelect;
     sharedProperties.setselectCa(newValue);
-  }
+  }*/
+  $scope.update = function(){
+     $scope.yelpselectCa = $scope.item.name;
+     console.log($scope.yelpselectCa);
+     sharedProperties.setselectCa($scope.yelpselectCa);
+     console.log(sharedProperties.getselectCa());get to know the neighborhood
+  };
+
 
 })
 

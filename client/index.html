@@ -12,27 +12,21 @@
     <!-- begin template -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
-            <a class="navbar-brand">Know Your Neighborhood Like Local Do</a>
+            <a class="navbar-brand">Get To Know The Neighborhood</a>
         </div>
         <div id="navbar" class="navbar-collapse">
             <div ng-controller="yelpCaController">
-                <select name="singleSelect" id="singleSelect" ng-model ="newSelect" ng-change="yelpselectCa(newSelect)">
-                  <option value="">---Please select---</option>
-                  <option value="{{data.Hotels}}">Hotels</option>
-                  <option value="{{data.Food}}">Food</option>
-                  <option value="{{data.Shopping}}">Shopping</option>
-                  <option value="{{data.Buses}}">Buses</option>
-                </select>
-                <span id="select-ca" style="color:white">{{newSelect}}</span>
+                <label>Select the Category</label>
+                <select ng-options="size as size.name for size in sizes" ng-model="item" ng-change="update()"></select>
             </div>
             <form>
                 <div ng-controller="yelpKeywordController" class="form-group" style="display:inline;">
                     <input type ="text" ng-model="newValue" id="keyword" placeholder="What you want?" class="form-control"/>
                     <button ng-click="setKeyword(newValue)">Search</button>
-                    <span style="color:white">{{yelpKeyword.data}}</span>
+                    <a href="#signout" ng-click="signout()" class="logout">Sign Out</a>
                 </div>
             </form>
-                <a href="#signout" ng-click="signout()" class="logout">Sign Out</a>
+
         </div>
     </nav>
 

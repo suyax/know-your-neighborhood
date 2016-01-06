@@ -24,8 +24,9 @@ a {
 }
 
 label {
-    color: #168ccc;
+    color: #9D9d9d;
     margin-left: 10px;
+    margin-top: 16px;
 }
 
 input {
@@ -84,7 +85,7 @@ input {
     overflow:hidden;
 }
 
-#select {
+select {
     height: 100%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
