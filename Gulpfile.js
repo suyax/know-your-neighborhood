@@ -15,18 +15,8 @@ var paths = {
 // any changes made to your
 // client side code will automagically refresh your page
 // with the new changes
-gulp.task('start', ['serve'], function () {
-  sync({
-    notify: true,
-    // address for server,
-    injectChanges: true,
-    files: paths.scripts.concat(paths.html, paths.styles),
-    proxy: 'localhost:3000'
-  });
-});
-
 // start our node server using nodemon
-gulp.task('serve', function () {
+gulp.task('start', function () {
   nodemon({
     script: './server/server.js',
     ignore: 'node_modules/**/*.js'
