@@ -4,8 +4,8 @@
   "description": "An angular app help plan your trip",
   "author": "Suya Xu",
   "scripts": {
-    "start": "gulp",
-    "lint": "jscs ./"
+    "start": "node app",
+    "postinstall": "gulp start"
   },
   "pre-commit": "lint",
   "repository": {
