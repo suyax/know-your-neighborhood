@@ -1,9 +1,12 @@
 {
   "name": "Know-the-neighborhood-like-local",
   "version": "1.0.0",
-  "engines": {"node": "v5.4.1",
+  "engines": {"node": "v5.4.1"},
   "description": "An angular app help plan your trip",
   "author": "Suya Xu",
+  "scripts": {
+    "start": "gulp start",
+  },
   "pre-commit": "lint",
   "repository": {
     "type": "git",
