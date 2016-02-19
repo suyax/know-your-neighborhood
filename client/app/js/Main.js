@@ -6,7 +6,7 @@ var defaultData = {
   img: "images/Hotel.svg",
   term: "inn",
   category: "hotels",
-  yelp_url: "http://api.yelp.com/v2/search"
+  yelp_url: "https://api.yelp.com/v2/search"
 };
 //Model
 //Global variables---model

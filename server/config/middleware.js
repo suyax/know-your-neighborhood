@@ -22,9 +22,9 @@ var port = process.env.PORT || 8000;
 // commonly found in a middleware stack.
 
 module.exports = function (app, express) {
-  app.use(morgan('dev'));
-  app.use(bodyParser.urlencoded({extended: true}));
-  app.use(bodyParser.json());
+  //app.use(morgan('dev'));
+  //app.use(bodyParser.urlencoded({extended: true}));
+  //app.use(bodyParser.json());
   //app.get('/', function(req, res) {
     //res.sendFile(path.join(__dirname +'/../../client/index.html'));
   var thePath = path.join(__dirname + '/../../client/');

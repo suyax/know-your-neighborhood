@@ -64,7 +64,7 @@ angular.module('Myapp', [])
       img: "images/Hotel.svg",
       term: "inn",
       category: "hotels",
-      yelp_url: "http://api.yelp.com/v2/search"
+      yelp_url: "//api.yelp.com/v2/search"
     };
 
     defaultData.term = $scope.yelpKeyword.data;

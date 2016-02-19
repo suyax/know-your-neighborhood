@@ -1,5 +1,5 @@
 var $yelpElem = $('#yelpElem');
-var yelp_url = "http://api.yelp.com/v2/search";
+var yelp_url = "https://api.yelp.com/v2/search";
 var yelpRequestTimeout = setTimeout(function(){
     $yelpElem.text("failed to get yelp resources");
 }, 8000);

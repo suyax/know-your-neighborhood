@@ -8,7 +8,7 @@ var path = require('path');
 require('./config/middleware.js')(app, express);
 //require('./config/routes.js')(app, express);
 app.get('/', function(req, res) {
-     res.sendFile(path.join(__dirname + '/../client/index.html'));
+     res.sendFile(path.join(__dirname + '/../client/'));
 });
 // start listening to requests on port 8000
 
