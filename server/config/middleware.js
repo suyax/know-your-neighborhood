@@ -1,7 +1,7 @@
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var path = require('path');
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 // Middleware can be thought of as a magical pipe that water flows through.
 // Each drop of water starts at the top opening of the pipe. As it falls through,
 // a magic spell is cast on it, and then it is spit out the bottom of the pipe
