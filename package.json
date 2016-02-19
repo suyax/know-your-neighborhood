@@ -1,16 +1,28 @@
 {
   "name": "Know-the-neighborhood-like-local",
   "version": "1.0.0",
-  "engines": {"node": "v5.4.1"},
+  "engines": {
+    "node": "^5.4.1"
+  },
   "description": "An angular app help plan your trip",
   "author": "Suya Xu",
-  "pre-commit": "lint",
+  "scripts": {
+    "start": "node server/server.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/suyax/Know-the-neighborhood-like-local.git"
   },
   "license": "UNLICENSED",
   "private": true,
+  "devDependencies": {
+    "browser-sync": "^1.5.7",
+    "clone-stats": "0.0.1",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-shell": "^0.2.7",
+    "pre-commit": "^1.1.1"
+  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
