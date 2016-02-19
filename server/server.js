@@ -1,12 +1,12 @@
 var express = require('express');
 //var mongoose = require('mongoose');
 var app = express();
-var port = process.env.PORT || 3000;
 var path = require('path');
+app.set('port', process.env.PORT || 3000)
 //mongoose.connect('mongodb://localhost/Myapp');
 
 // configure our server with all the middleware and routing
-require('./config/middleware.js')(app, express);
+//require('./config/middleware.js')(app, express);
 //require('./config/routes.js')(app, express);
 app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname + '/../client/index.html'));
