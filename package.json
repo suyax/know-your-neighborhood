@@ -4,13 +4,10 @@
   "engines": {"node": "v5.4.1"},
   "description": "An angular app help plan your trip",
   "author": "Suya Xu",
-  "scripts": {
-    "start": "gulp start",
-  },
   "pre-commit": "lint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/suyax/2015-11-mvp.git"
+    "url": "https://github.com/suyax/Know-the-neighborhood-like-local.git"
   },
   "license": "UNLICENSED",
   "private": true,
