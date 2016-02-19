@@ -2,7 +2,8 @@
   "name": "Know-the-neighborhood-like-local",
   "version": "1.0.0",
   "engines": {
-    "node": "^5.4.1"
+    "node": "^5.4.1",
+    "npm": "^3.5.3"
   },
   "description": "An angular app help plan your trip",
   "author": "Suya Xu",

@@ -1,8 +1,8 @@
 var express = require('express');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var app = express();
 var port = process.env.PORT || 3000;
-
+var path = require('path');
 //mongoose.connect('mongodb://localhost/Myapp');
 
 // configure our server with all the middleware and routing
