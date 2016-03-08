@@ -23,7 +23,7 @@ var yelpRequestTimeout = setTimeout(function(){
 var nonce = Math.floor(Math.random() * 1e12).toString();
 var parameters = {
   oauth_consumer_key: "7rqoAa2v6JN6e-OxrS6fHQ",
-  oauth_token: "jTINSkrHtlq0Vw8eRrYyK1SFrXmLWUnt",
+  oauth_token: "omTVpsVs_FzVgxLbGPXqeZVrlB8oDcoS",
   oauth_nonce: nonce,
   oauth_timestamp: Math.floor(Date.now()/1000),
   oauth_signature_method: 'HMAC-SHA1',
@@ -45,7 +45,7 @@ function dataValidater(data,item){
 }
 
 var encodedSignature = oauthSignature.generate('GET', defaultData.yelp_url, parameters,
-    "YOoYY4UHe1D3tEixMbExUtBqptI", "0H8fIAhkGp_z9M09IIfQxmvZoIk");
+    "YOoYY4UHe1D3tEixMbExUtBqptI", "G2Hd_VDIroxB_PyvV4i4XHoMZNk");
 
 parameters.oauth_signature = encodedSignature;
 
